@@ -7,25 +7,15 @@ def create_playlist(folder_path,):
     
     # Get all files in the folder
     audio_files = os.listdir(folder_path)
-    
-    # Filter audio files
-    # audio_files = [file for file in files if os.path.splitext(file)[1] in audio_extensions] 
-    
-    # if shuffle:
+   
     random.shuffle(audio_files)  # Shuffle the list of audio files
-    
-    # Create playlist file
-    # playlist_file = os.path.join(folder_path, playlist_name + ".m3u")
-    
-    # with open(playlist_file, "w") as f:
+   
+   
         # Write each audio file path to the playlist file
     print (audio_files)
     for audio_file in audio_files:
         file_path = os.path.join(folder_path, audio_file)
         play_playlist(file_path)
-    
-    print("Playlist created successfully!")
-    
     
     return playlist_file
 
