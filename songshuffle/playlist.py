@@ -3,14 +3,12 @@ import random
 import pygame
 
 def create_playlist(folder_path,):
-    # audio_extensions = [".mp3", ".wav"]  # Supported audio file extensions 
-    
+      
     # Get all files in the folder
     audio_files = os.listdir(folder_path)
    
     random.shuffle(audio_files)  # Shuffle the list of audio files
-   
-   
+      
         # Write each audio file path to the playlist file
     print (audio_files)
     for audio_file in audio_files:
@@ -28,6 +26,7 @@ def play_playlist(playlist_file):
     pygame.mixer.music.load(playlist_file)
     
     # Start playing the playlist
+    # play_song()
     pygame.mixer.music.play()
     
     # Wait for the playlist to finish playing
