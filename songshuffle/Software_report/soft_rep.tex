@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{listings}
+
+\begin{document}
+
+\title{Software Assignment Report}
+\author{Rithika Gajarla (BT22BTECH11013)}
+
+\maketitle
+
+The code is used to play the songs using the \texttt{pygame} library. By shuffling the audio files, the songs are played in a random order.
+\section{Libraries imported}
+\begin{itemize}\item \textbf{\texttt{os}}\end{itemize}
+\begin{itemize}\item \textbf{\texttt{random}}- For shuffling the audio files\end{itemize}
+\begin{itemize}\item \textbf{\texttt{pygame}}- For playing the audio files\end{itemize}
+  
+\section{Functions used}   
+        \begin{itemize}
+           
+        
+                \item The list of audio files is shuffled randomly using \texttt{random.shuffle()}.
+                \item It then iterates over each audio file in the shuffled list, constructs the full file path using \texttt{os.path.join()}, and calls the \texttt{play\_song()} function to play the audio file.
+               
+            \end{itemize}
+       \begin{itemize}   
+            \item \texttt{play\_song()}: This function performs the following steps:
+            
+                \item It initializes the \texttt{pygame.mixer} module for audio playback using \texttt{pygame.mixer.init()}.
+                \item The specified song is loaded using \texttt{pygame.mixer.music.load()}.
+                \item The song is played using \texttt{pygame.mixer.music.play()}.
+                \item It enters a loop that waits for the song to finish playing by continuously checking \texttt{pygame.mixer.music.get\_busy()}.
+            \end{itemize}
+\begin{itemize}  
+    \item \textbf{Usage Example}: In this section, the code sets the \texttt{folder\_path} variable to \texttt{"./songs"}, indicating that it will look for songs in the "songs" subdirectory of the current working directory.
+     \end{itemize}
+     
+\section{Link to the code}  
+     https://github.com/Rithika83/Probability/blob/main/songshuffle/playlist.py
+
+
+\end{document}
